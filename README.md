@@ -81,14 +81,7 @@ Current version is 1.0.0.
 Extra [Alpine packages](https://pkgs.alpinelinux.org/packages) can be installed on the fly with the package manager apk.
 
 ```sh
-4a3121be274f login: admin
-Password: admin
-Welcome to Alpine!
-
-4a3121be274f:~$ bson_decode 
-Missing argument
-Usage : bson_decode <bson_file>
-4a3121be274f:~$ 
+$ apk add -U zsh 
 ```
 
 
