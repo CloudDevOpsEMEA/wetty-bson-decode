@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wetty-bson-decode
+  labels:
+    app: wetty-bson-decode
+    version: 1.0.0
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wetty-bson-decode
+  template:
+    metadata:
+      labels:
+        app: wetty-bson-decode
+        version: 1.0.0
+    spec:
+      containers:
+        - name: wetty-bson-decode
+          image: boeboe/wetty-bson-decode:1.0.0
+          imagePullPolicy: Always
+          ports:
+            - name: wetty-web
+              containerPort: 3000
+---
